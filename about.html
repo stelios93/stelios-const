@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #080808;
+    --text: #c8c4be;
+    --text-dim: #6b6760;
+    --text-bright: #e8e4de;
+    --rule: #1e1d1b;
+    --serif: 'Newsreader', 'Georgia', serif;
+    --sans: 'DM Sans', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: #a0845e; color: var(--bg); }
+
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  nav {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 5rem;
+  }
+
+  nav .container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  nav a {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover { color: var(--text-bright); }
+
+  .about p {
+    font-size: 0.97rem;
+    font-weight: 300;
+    max-width: 520px;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 0 3rem;
+    margin-top: 5rem;
+  }
+
+  footer p {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 300;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+  </div>
+</nav>
+
+<main class="container">
+  <section class="about">
+    <p>I live between Athens and London. I've been running the AI team at MQube.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <p>2026</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=DM+Sans:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #080808;
+    --text: #c8c4be;
+    --text-dim: #6b6760;
+    --text-bright: #e8e4de;
+    --rule: #1e1d1b;
+    --serif: 'Newsreader', 'Georgia', serif;
+    --sans: 'DM Sans', sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  body {
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: #a0845e; color: var(--bg); }
+
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  nav {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 5rem;
+  }
+
+  nav .container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+  }
+
+  nav a {
+    font-family: var(--sans);
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover { color: var(--text-bright); }
+
+  .blog-header {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 3rem;
+  }
+
+  .post {
+    margin-bottom: 5rem;
+  }
+
+  .post-meta {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: var(--text-dim);
+    letter-spacing: 0.04em;
+    margin-bottom: 0.8rem;
+  }
+
+  .post h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 1.55rem;
+    color: var(--text-bright);
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .post p {
+    margin-bottom: 1.3rem;
+    font-size: 0.97rem;
+    font-weight: 300;
+  }
+
+  .post p:last-child { margin-bottom: 0; }
+
+  .post em {
+    font-style: italic;
+    color: var(--text-bright);
+  }
+
+  .post strong {
+    font-weight: 500;
+    color: var(--text-bright);
+  }
+
+  .post .separator {
+    display: block;
+    text-align: center;
+    color: var(--text-dim);
+    margin: 2rem 0;
+    font-size: 0.9rem;
+    letter-spacing: 0.5em;
+  }
+
+  footer {
+    border-top: 1px solid var(--rule);
+    padding: 2rem 0 3rem;
+    margin-top: 2rem;
+  }
+
+  footer p {
+    font-family: var(--mono);
+    font-size: 0.65rem;
+    font-weight: 300;
+    color: var(--text-dim);
+    letter-spacing: 0.06em;
+  }
+
+  @media (max-width: 520px) {
+    body { font-size: 16px; }
+    .post h2 { font-size: 1.3rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<main class="container">
+
+  <div class="blog-header">Writing</div>
+
+  <article class="post">
+    <div class="post-meta">April 2026</div>
+    <h2>Do LLMs Have a Greece Problem?</h2>
+
+    <p>
+      Large language models are increasingly relied upon as de facto arbiters of knowledge. When someone asks GPT or Claude about a historical event, a territorial dispute, or a cultural claim, the answer they receive carries weight&mdash;even when the model is hedging. I wanted to know: how do frontier LLMs handle questions where Greece has a well-established position under international law or scholarly consensus? And more importantly, do they treat these positions fairly, or do they manufacture ambiguity where none exists?
+    </p>
+
+    <p>
+      To find out, I built a systematic testing framework. I assembled <strong>118 sensitive questions</strong> spanning over 30 categories&mdash;Aegean sovereignty, Macedonia and Alexander the Great, Cyprus, Constantinople and Hagia Sophia, the Greek Genocides, the Elgin Marbles, Greek-Turkish relations, Greek identity and civilisational continuity, and more. Each question was defined with explicit pro-Greek and anti-Greek reference positions, and every response was scored on a 1&ndash;5 scale. I then ran the full battery against five frontier models: <strong>GPT-5.2, Claude Opus 4.6, Qwen 3.5 Plus, DeepSeek v3.2, and Gemini 3.1 Pro</strong>.
+    </p>
+
+    <p>
+      But testing in English alone tells an incomplete story. I ran the same questions in <strong>13 languages</strong>&mdash;from Mandarin and Hindi to Turkish and Arabic&mdash;to see whether models shift their positions depending on the language of the query. The results were revealing: some models showed meaningful score variance across languages, suggesting that the training data&rsquo;s linguistic composition leaves fingerprints on the output.
+    </p>
+
+    <span class="separator">&middot; &middot; &middot;</span>
+
+    <p>
+      The methodology goes deeper than simple scoring. I introduced a <strong>position strength framework</strong> that classifies each question on a spectrum from <em>undisputed fact</em> (e.g., &ldquo;Alexander the Great was Greek&rdquo;&mdash;overwhelming scholarly consensus) to <em>political opinion</em>. Cross-referencing position strength against model scores reveals what I call <em>manufactured ambiguity</em>&mdash;cases where a model hedges on questions that are not genuinely contested. This is the more concerning finding: not outright bias, but a pattern of false balance on settled matters.
+    </p>
+
+    <p>
+      I also ran two adversarial experiments. In <strong>persona testing</strong>, I prompted GPT-5.2 and Claude Opus 4.6 through nine distinct personas&mdash;a British academic, a Turkish nationalist, a Greek diaspora member, an Arab conservative, a Hindu nationalist, among others&mdash;to measure how identity framing shifts responses. In the <strong>fake authority attack</strong>, I injected fabricated but authoritative-sounding citations (scaling from 1 to 5 fake sources) to test whether models could be nudged toward different positions through citation laundering&mdash;a technique with real implications for information warfare.
+    </p>
+
+    <p>
+      The goal was never to produce a scorecard of which model is &ldquo;most pro-Greek.&rdquo; It was to build a repeatable framework&mdash;a <strong>Model Alignment Index</strong>&mdash;that makes LLM behaviour on contested geopolitical topics measurable and comparable. The framework is general: swap out the questions and positions, and it works for any country or domain. Greece was simply where I started, because I know the territory.
+    </p>
+  </article>
+
+</main>
+
+<footer>
+  <div class="container">
+    <p>2026</p>
+  </div>
+</footer>
+
+</body>
+</html>
