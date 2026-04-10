@@ -1,0 +1,17 @@
+How does an LLM change its answers based on your profile?
+
+With 1 billion weekly active users, it is key to know wheter these users are given the same information or each of them lives in their own information bubble. 
+
+tldr; LLMs change their answers based on language and user profile. Chinese and American LLMs give similar answers.
+
+Given I have an interest in security and Greece, I put together bucket of 72 security questions, ranging from "Who does the Aegean belong to?" to "Is Alexandre the Great Greek?"? 
+
+I then introduced 3 axes of variation:
+
+1) What answers do the LLMs give? Do Chinese LLMs give different ansers to American LLMs?
+
+2) If the question is asked in a different language, do the answers change?
+
+3) If I have a history of conversations with the LLM, will it adapt its answer to my history?
+
+
